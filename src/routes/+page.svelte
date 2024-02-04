@@ -4,7 +4,7 @@
 	const vectY = Math.sin(angle);
 	const shadowLength = 800;
 	const shadowDensity = 1;
-	let value = `And, when you want something,\nall the universe conspires in helping you to achieve it.`;
+	let value = `And, when you want\nsomething,\nall the universe\n conspires\n in helping you\n to achieve it.`;
 	const boxShadow =
 		'text-shadow:' +
 		Array(shadowLength)
