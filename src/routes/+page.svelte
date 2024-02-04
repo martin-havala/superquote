@@ -93,7 +93,7 @@
 	}
 
 	#shadow2 {
-		mask-image: url('$lib/circles_white.svg');
+		mask-image: url('$lib/images/circles_white.svg');
         mask-size: cover;
 	}
 </style>
