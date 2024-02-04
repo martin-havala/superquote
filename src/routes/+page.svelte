@@ -1,10 +1,14 @@
 <script lang="ts">
+	import quotes from './quotes.json';
+
 	const angle = (Math.PI / 180) * 118;
 	const vectX = Math.cos(angle);
 	const vectY = Math.sin(angle);
 	const shadowLength = 800;
 	const shadowDensity = 1;
-	let value = `And, when you want\nsomething,\nall the universe\n conspires\n in helping you\n to achieve it.`;
+	const selectedIndex = Math.floor(Math.random() * quotes.length);
+	let value = quotes[selectedIndex].quote;
+	let author = quotes[selectedIndex].author;
 	const boxShadow =
 		'text-shadow:' +
 		Array(shadowLength)
@@ -69,12 +73,12 @@
 	textarea,
 	.shadow {
 		font-family: 'TTNormsPro', sans-serif;
-		font-size: 60px;
-		line-height: 58px;
-		padding: 0 0 0 20vw;
+		font-size: 52px;
+		line-height: 0.96;
+		padding: 0 0 0 10vw;
 		margin: 0;
 		white-space: pre-line;
-		word-break: break-all;
+		word-break: break-word;
 		text-transform: uppercase;
 		-webkit-font-smoothing: antialiased;
 		text-align: left;
@@ -94,6 +98,6 @@
 
 	#shadow2 {
 		mask-image: url('$lib/images/circles_white.svg');
-        mask-size: cover;
+		mask-size: cover;
 	}
 </style>

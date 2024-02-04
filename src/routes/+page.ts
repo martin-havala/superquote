@@ -1,6 +1,6 @@
-
 // render cakes only once
 export const csr = true;
+export const ssr = false;
 
 // since there's no dynamic data here, we can prerender
 // it so that it gets served as a static asset in production
