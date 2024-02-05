@@ -35,8 +35,8 @@
 	}
 </script>
 
-<!-- svelte-ignore a11y-no-static-element-interactions -->
-<section on:dblclick={toggleDisabled}>
+<svelte:window on:dblclick={toggleDisabled} />
+<section >
 	<div id="shadow1" class="shadow" style={boxShadow}>{value}</div>
 	<div id="shadow2" class="shadow" style={boxShadowColored}>{value}</div>
 	<textarea class="text" bind:value spellcheck="false" maxlength="128" {disabled} />
@@ -93,5 +93,10 @@
 	#shadow2 {
 		mask-image: url('$lib/images/circles_white.svg');
 		mask-size: cover;
+	}
+	button{
+		position: fixed;
+		bottom:0;
+		right:0
 	}
 </style>
