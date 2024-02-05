@@ -1,5 +1,6 @@
 <script lang="ts">
 	import quotes from './quotes.json';
+	import { afterUpdate } from 'svelte';
 
 	const angle = (Math.PI / 180) * 118;
 	const vectX = Math.cos(angle);
@@ -8,6 +9,15 @@
 	const shadowDensity = 1;
 	const selectedIndex = Math.floor(Math.random() * quotes.length);
 	let value = quotes[selectedIndex].quote;
+
+	afterUpdate(() => {
+		const urlParams = new URLSearchParams(window.location.search);
+		const queryValue = urlParams.get('value');
+		if (queryValue) {
+			value = queryValue;
+		}
+	});
+
 	let author = quotes[selectedIndex].author;
 	const boxShadow =
 		'text-shadow:' +
@@ -36,7 +46,7 @@
 </script>
 
 <svelte:window on:dblclick={toggleDisabled} />
-<section >
+<section>
 	<div id="shadow1" class="shadow" style={boxShadow}>{value}</div>
 	<div id="shadow2" class="shadow" style={boxShadowColored}>{value}</div>
 	<textarea class="text" bind:value spellcheck="false" maxlength="128" {disabled} />
@@ -94,9 +104,9 @@
 		mask-image: url('$lib/images/circles_white.svg');
 		mask-size: cover;
 	}
-	button{
+	button {
 		position: fixed;
-		bottom:0;
-		right:0
+		bottom: 0;
+		right: 0;
 	}
 </style>
