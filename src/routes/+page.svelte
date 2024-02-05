@@ -35,17 +35,11 @@
 	}
 </script>
 
-<section>
+<!-- svelte-ignore a11y-no-static-element-interactions -->
+<section on:dblclick={toggleDisabled}>
 	<div id="shadow1" class="shadow" style={boxShadow}>{value}</div>
 	<div id="shadow2" class="shadow" style={boxShadowColored}>{value}</div>
-	<textarea
-		class="text"
-		bind:value
-		spellcheck="false"
-		maxlength="128"
-		{disabled}
-		on:dblclick={toggleDisabled}
-	/>
+	<textarea class="text" bind:value spellcheck="false" maxlength="128" {disabled} />
 </section>
 
 <style>
