@@ -1,18 +1,33 @@
 <script lang="ts">
+	import { page } from '$app/stores';
 	import normsPro from '$lib/fonts/TTNormsPro-ExtraBlack.woff';
 	import circles from '$lib/images/circles_white.svg';
+	import { calc } from '$lib/scripts/path.math';
 	import opentype, { Font } from 'opentype.js';
 	import { onMount } from 'svelte';
 	import quotes from './quotes.json';
-	import { calc } from '$lib/scripts/path.math';
+	import { base } from '$app/paths';
 
 	const selectedIndex = Math.floor(Math.random() * quotes.length);
-	let value = quotes[selectedIndex].quote;
-	let author = quotes[selectedIndex].author;
-	let font: Font | null = null;
-	$: calculatedSvgs = font ? calc(value.toLocaleUpperCase().split('\n'), font) : [];
 
+	let value = $page.url.searchParams.get('quote') || quotes[selectedIndex].quote;
+	let author = $page.url.searchParams.get('quote') ? '' : quotes[selectedIndex].author;
+	$: calculatedSvgs = font ? calc(value.toLocaleUpperCase().split('\n'), font) : [];
+	$: urlValue = `${base}?quote=${encodeURIComponent(value)}`;
+
+	let font: Font | null = null;
 	let loading = true;
+	let disabled = false;
+	
+	function toggleDisabled() {
+		disabled = !disabled;
+		const a = document.getElementsByTagName('textarea')[0];
+		a.setSelectionRange(a.value.length, a.value.length);
+	}
+
+	function removeAuthor() {
+		author = '';
+	}
 
 	onMount(() => {
 		opentype.load(normsPro).then((f) => {
@@ -20,19 +35,13 @@
 			loading = false;
 		});
 	});
-
-
-	let disabled = false;
-	function toggleDisabled() {
-		disabled = !disabled;
-		const a = document.getElementsByTagName('textarea')[0];
-		a.setSelectionRange(a.value.length, a.value.length);
-	}
 </script>
+
 <svelte:window on:dblclick={toggleDisabled} />
 
 <section>
 	{#if !loading}
+		<a href={urlValue} target="_blank">🔗</a>
 		<!-- <img id="circles" src={circles} alt="background"/> -->
 		<svg viewBox="0 0 1600 1000" xmlns="http://www.w3.org/2000/svg">
 			<defs>
@@ -43,7 +52,8 @@
 					x2="-96884"
 					y2="92747"
 					gradientUnits="userSpaceOnUse"
-					><stop stop-color="#7D36CF" stop-opacity="0.15"></stop><stop
+				>
+					<stop stop-color="#7D36CF" stop-opacity="0.15"></stop><stop
 						offset="1"
 						stop-color="#4F36CF"
 						stop-opacity="0"
@@ -81,7 +91,14 @@
 				{/each}
 			</g>
 		</svg>
-		<textarea class="text" bind:value spellcheck="false" {disabled}/>
+		<textarea
+			class="text"
+			bind:value
+			spellcheck="false"
+			{disabled}
+			title={author}
+			on:change={removeAuthor}
+		/>
 	{/if}
 </section>
 
@@ -150,5 +167,13 @@
 	}
 	.gradient {
 		fill: url(#linearGradient);
+	}
+
+	a {
+		text-decoration: none;
+		position: fixed;
+		bottom: 1em;
+		right: 1em;
+		z-index: 1;
 	}
 </style>
