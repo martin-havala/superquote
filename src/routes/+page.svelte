@@ -156,7 +156,7 @@
 		width: 1600px;
 		height: 1000px;
 		top: 30vh;
-		overflow: hidden;
+		overflow: visible;
 	}
 
 	svg .text {
