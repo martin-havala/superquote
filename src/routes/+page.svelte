@@ -10,7 +10,8 @@
 
 	const selectedIndex = Math.floor(Math.random() * quotes.length);
 
-	let value = $page.url.searchParams.get('quote') || quotes[selectedIndex].quote;
+	let value =
+		decodeURIComponent($page.url.searchParams.get('quote') || '') || quotes[selectedIndex].quote;
 	let author = $page.url.searchParams.get('quote') ? '' : quotes[selectedIndex].author;
 	$: calculatedSvgs = font ? calc(value.toLocaleUpperCase().split('\n'), font) : [];
 	$: urlValue = `${base}?quote=${encodeURIComponent(value)}`;
@@ -18,7 +19,7 @@
 	let font: Font | null = null;
 	let loading = true;
 	let disabled = false;
-	
+
 	function toggleDisabled() {
 		disabled = !disabled;
 		const a = document.getElementsByTagName('textarea')[0];
