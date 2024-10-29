@@ -1,107 +1,110 @@
 [
-    
-    {
-        "quote": "Hold the vision\ntrust the process",
-        "author": "?"
-    },
-    {
-        "quote": "Everything\nyou can imagine\nis real",
-        "author": "Pablo Picasso"
-    },
-    {
-        "quote": "Don’t let yesterday\ntake up too much\nof today",
-        "author": "Will Rogers"
-    },
-    {
-        "quote": "Success usually comes to those\nwho are too busy\nto be looking for it",
-        "author": "Henry David Thoreau"
-    },
-    {
-        "quote": "Believe you can\nand you're\nhalfway there",
-        "author": "Theodore Roosevelt"
-    },
-    {
-        "quote": "You are never too old\nto set another goal\nor to dream a new dream",
-        "author": "C.S. Lewis"
-    },
-    {
-        "quote": "Don't sit down and wait\nfor the opportunities to come.\nGet up and make them",
-        "author": "Madam C.J. Walker"
-    },
-    {
-        "quote": "Champions keep playing\nuntil they get it right",
-        "author": "Billie Jean King"
-    },
-    {
-        "quote": "All our dreams can come true\nif we have the courage to pursue them",
-        "author": "Walt Disney"
-    },
-    {
-        "quote": "Everything sent out\nreturns to the source—you",
-        "author": "Rhonda Byrne"
-    },
-    {
-        "quote": "The better you feel about money,\nthe more money you magnetize to yourself",
-        "author": "Rhonda Byrne"
-    },
-    {
-        "quote": "Laughter attracts joy,\nreleases negativity,\nand leads to \nmiraculous cures",
-        "author": "Rhonda Byrne"
-    },
-    {
-        "quote": "You create your own universe\nas you go along",
-        "author": "Rhonda Byrne"
-    },
-    {
-        "quote": "Whatsoever ye \nshall ask in prayer,\nbelieving,\nye shall receive.",
-        "author": "Mathew 21:22"
-    },
-    {
-        "quote": "Decide what you want\nBelieve you can have it\nBelieve you deserve it\nBelieve it’s possible for you",
-        "author": "Rhonda Byrne"
-    },
-    {
-        "quote": "Start telling the story\nof your amazing life,\nand the law of attraction\nmust make sure you receive it!",
-        "author": "Rhonda Byrne"
-    },
-    {
-        "quote": "Food cannot cause you\nto put on weight,\nunless you think it can",
-        "author": "Rhonda Byrne"
-    },
-    {
-        "quote": "Whenever you think\nyou can or think you can’t\neither way you are right",
-        "author": "Henry Ford"
-    },
-    {
-        "quote": "You become \nwhat you think about most",
-        "author": "John Assaraf"
-    },
-    {
-        "quote": "See the things\nthat you want\nas already yours",
-        "author": "Rhonda Byrne"
-    },
-    {
-        "quote": "Your thoughts\nbecome things",
-        "author": "Rhonda Byrne"
-    },
-    {
-        "quote": "Your power is\nin your thoughts,\nso stay awake",
-        "author": "Rhonda Byrne"
-    },
-    {
+	{
+		"quote": "Shine bright\nlike a diamond",
+		"author": "Rihanna"
+	},
+	{
+		"quote": "Hold the vision\ntrust the process",
+		"author": "?"
+	},
+	{
+		"quote": "Everything\nyou can imagine\nis real",
+		"author": "Pablo Picasso"
+	},
+	{
+		"quote": "Don’t let yesterday\ntake up too much\nof today",
+		"author": "Will Rogers"
+	},
+	{
+		"quote": "Success usually comes to those\nwho are too busy\nto be looking for it",
+		"author": "Henry David Thoreau"
+	},
+	{
+		"quote": "Believe you can\nand you're\nhalfway there",
+		"author": "Theodore Roosevelt"
+	},
+	{
+		"quote": "You are never too old\nto set another goal\nor to dream a new dream",
+		"author": "C.S. Lewis"
+	},
+	{
+		"quote": "Don't sit down and wait\nfor the opportunities to come.\nGet up and make them",
+		"author": "Madam C.J. Walker"
+	},
+	{
+		"quote": "Champions keep playing\nuntil they get it right",
+		"author": "Billie Jean King"
+	},
+	{
+		"quote": "All our dreams can come true\nif we have the courage to pursue them",
+		"author": "Walt Disney"
+	},
+	{
+		"quote": "Everything sent out\nreturns to the source—you",
+		"author": "Rhonda Byrne"
+	},
+	{
+		"quote": "The better you feel about money,\nthe more money you magnetize to yourself",
+		"author": "Rhonda Byrne"
+	},
+	{
+		"quote": "Laughter attracts joy,\nreleases negativity,\nand leads to \nmiraculous cures",
+		"author": "Rhonda Byrne"
+	},
+	{
+		"quote": "You create your own universe\nas you go along",
+		"author": "Rhonda Byrne"
+	},
+	{
+		"quote": "Whatsoever ye \nshall ask in prayer,\nbelieving,\nye shall receive.",
+		"author": "Mathew 21:22"
+	},
+	{
+		"quote": "Decide what you want\nBelieve you can have it\nBelieve you deserve it\nBelieve it’s possible for you",
+		"author": "Rhonda Byrne"
+	},
+	{
+		"quote": "Start telling the story\nof your amazing life,\nand the law of attraction\nmust make sure you receive it!",
+		"author": "Rhonda Byrne"
+	},
+	{
+		"quote": "Food cannot cause you\nto put on weight,\nunless you think it can",
+		"author": "Rhonda Byrne"
+	},
+	{
+		"quote": "Whenever you think\nyou can or think you can’t\neither way you are right",
+		"author": "Henry Ford"
+	},
+	{
+		"quote": "You become \nwhat you think about most",
+		"author": "John Assaraf"
+	},
+	{
+		"quote": "See the things\nthat you want\nas already yours",
+		"author": "Rhonda Byrne"
+	},
+	{
+		"quote": "Your thoughts\nbecome things",
+		"author": "Rhonda Byrne"
+	},
+	{
+		"quote": "Your power is\nin your thoughts,\nso stay awake",
+		"author": "Rhonda Byrne"
+	},
+	{
 		"quote": "Close some doors today,\nnot because of pride,\nincapacity or arrogance,\nbut simply because\nthey lead you nowhere",
-        "author": "Paolo Coelho"
+		"author": "Paolo Coelho"
 	},
-    {
+	{
 		"quote": "Fight for your dreams\nand your dreams\nwill fight for you",
-        "author": "Paolo Coelho"
+		"author": "Paolo Coelho"
 	},
-    {
+	{
 		"quote": "Be brave. Take risks.\nNothing can substitute\nexperience",
-        "author": "Paolo Coelho"
+		"author": "Paolo Coelho"
 	},
 	{
 		"quote": "your thoughts are\nthe primary cause\nof everything",
-        "author": "Rhonda Byrne"
+		"author": "Rhonda Byrne"
 	}
 ]

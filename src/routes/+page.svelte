@@ -72,8 +72,8 @@
 					<stop style="stop-color:#292929;stop-opacity:1;" offset="1" />
 				</linearGradient>
 
-				<mask id="test">
-					<use href="{circles}#circles" transform=" rotate(-28)"></use>
+				<mask id="mask">
+					<use href="{circles}#circles" transform="rotate(-28)"></use>
 				</mask>
 			</defs>
 
@@ -81,7 +81,7 @@
 				{#each calculatedSvgs as path}
 					{#each path.shadow as d}
 						<path class="shadow" {d} />
-						<path class="gradient" mask="url(#test)" {d} />
+						<path class="gradient" mask="url(#mask)" {d} />
 					{/each}
 				{/each}
 			</g>
